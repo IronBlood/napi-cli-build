@@ -1,0 +1,83 @@
+{
+  "name": "@ironblood/napi-cli-build",
+  "version": "3.4.1",
+  "description": "`napi build` without native dependencies",
+  "author": "LongYinan <lynweklm@gmail.com>",
+  "homepage": "https://github.com/ironblood/napi-cli-build",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">= 16"
+  },
+  "bin": {
+    "napi-build": "./dist/cli.js",
+    "napi-raw-build": "./cli.mjs"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!__tests__"
+  ],
+  "keywords": [
+    "cli",
+    "rust",
+    "napi",
+    "n-api",
+    "node-api",
+    "node-addon",
+    "neon"
+  ],
+  "maintainers": [
+    {
+      "name": "LongYinan",
+      "email": "lynweklm@gmail.com",
+      "homepage": "https://github.com/Brooooooklyn"
+    },
+    {
+      "name": "forehalo",
+      "homepage": "https://github.com/forehalo"
+    },
+    {
+      "name": "Yang Shen",
+      "homepage": "https://github.com/IronBlood"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IronBlood/napi-cli-build.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/IronBlood/napi-cli-build/issues"
+  },
+  "dependencies": {
+    "clipanion": "^4.0.0-rc.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Brooooooklyn"
+  },
+  "scripts": {
+    "codegen": "node --import @oxc-node/core/register ./codegen/index.ts",
+    "build": "tsdown",
+    "test": "node --import @oxc-node/core/register ../node_modules/ava/entrypoints/cli.mjs"
+  }
+}
