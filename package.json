@@ -64,8 +64,10 @@
     "url": "https://github.com/IronBlood/napi-cli-build/issues"
   },
   "dependencies": {
+    "@napi-rs/wasm-tools": "^1.0.1",
     "clipanion": "^4.0.0-rc.4",
     "colorette": "^2.0.20",
+    "es-toolkit": "^1.41.0",
     "obug": "^2.0.0"
   },
   "devDependencies": {
@@ -80,6 +82,7 @@
   "scripts": {
     "codegen": "node --import @oxc-node/core/register ./codegen/index.ts",
     "build": "tsdown",
+    "build:tsc": "tsc",
     "test": "node --import @oxc-node/core/register ../node_modules/ava/entrypoints/cli.mjs"
   }
 }

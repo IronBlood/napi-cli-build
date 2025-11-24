@@ -33,3 +33,4 @@ export const debugFactory = (namespace: string) => {
 
   return debug
 }
+export const debug = debugFactory('utils')
