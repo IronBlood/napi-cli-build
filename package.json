@@ -10,8 +10,8 @@
     "node": ">= 16"
   },
   "bin": {
-    "napi-build": "./dist/cli.js",
-    "napi-raw-build": "./cli.mjs"
+    "napi-build": "dist/cli.js",
+    "napi-raw-build": "cli.mjs"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
