@@ -27,6 +27,9 @@ jobs:
           cache: "pnpm"
           registry-url: https://registry.npmjs.org
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Set version from tag
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
